@@ -1,7 +1,11 @@
 20.11.2022
 # openHAB 3.X
 ## Rules
-### Timestamp with ECMAScript 262 Edition 11
+## Timestamp with ECMAScript 262 Edition 11  
+
+The challenge:
+
+How to write date and time in readable format for DateTime item. Optionally with time offset
 
 1.	Writing a -Java Time- timestamp with method now() into an openHAB DateTime item
 
