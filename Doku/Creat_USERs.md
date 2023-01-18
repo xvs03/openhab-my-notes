@@ -27,7 +27,7 @@ name2 (user)
 User created.
 ```
 
-4. Example: List remove User
+4. Example: remove User
 
 ```Karaf
 openhab> openhab:users remove name2
