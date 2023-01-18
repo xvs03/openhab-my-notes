@@ -34,5 +34,7 @@ openhab> openhab:users remove name2
 User removed.
 ```
 
+Info Source:
 
+https://community.openhab.org
 
