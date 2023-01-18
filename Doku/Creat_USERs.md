@@ -19,7 +19,7 @@ name1 (user)
 admin (administrator)
 ```
 
-3. Example: List create User
+3. Example: create User
 
 ```Karaf
 openhab> openhab:users add name2 mypassword2 user
