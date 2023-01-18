@@ -1,4 +1,3 @@
-20.11.2022
 # openHAB 3.X
 ## Karaf Console
 ## Create USERs to admin the UI Pages  
