@@ -1,4 +1,3 @@
-20.11.2022
 # openHAB 3.X
 ## Rules
 ## Timestamp with ECMAScript 262 Edition 11  
