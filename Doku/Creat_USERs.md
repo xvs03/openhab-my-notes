@@ -33,6 +33,40 @@ openhab> openhab:users remove name2
 User removed.
 ```
 
+5. Example: Add User with specific "role"
+
+```karaf 
+openhab> openhab:users add
+Usage: openhab:users add <userId> <password> <role> - adds a new user with the specified role
+```
+
+6. Display all commands for user administration
+
+```karaf
+openhab> openhab:users help
+```
+
+
+## Advanced configuration of the website visible only to diverse users
+
+1. Open the page that should be visible only for various users
+   
+2. Then go to the tab "Code" and search
+   
+
+**Here you can enter your previously created "roles"**: 
+```YAML
+config:
+...
+  visibleTo:
+    - role:administrator
+    - role:user
+    - role:name1
+```
+
+
+
+
 Info Source:
 
 https://community.openhab.org
