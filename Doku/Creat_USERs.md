@@ -61,7 +61,7 @@ config:
   visibleTo:
     - role:administrator
     - role:user
-    - role:name1
+    - role:dog_or_cat
 ```
 
 
