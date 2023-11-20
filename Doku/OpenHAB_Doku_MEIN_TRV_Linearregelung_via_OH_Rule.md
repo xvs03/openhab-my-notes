@@ -86,6 +86,7 @@ console.log("Ventilöffnung in % wird an das TRV gesendet >>> ", VentiloeffnungI
 ``` 
 #### Durch diese Rule wird ein Ventilöffnungswert zwischen 0 und 100 berechnet und an das TRV gesendet.
 #### Die Constante "Grundwert" beschreibt die maximale Abweichung von eingestellten Raumsollwert. Sie kann selbstverständlich nach belieben verändert werden oder in ein Item mit Setpoint direkt in der WebUI eingestellt werden.
+#### Der Raumtemperaturistwert wird in diesem Beispiel von einem ESP8266 mit DHT22 geholt, welches über das MQTT Protokoll die Daten an OpenHAB liefert. Dieses kann man zum schmalen Kurs selbst bauen und an die kälteste Stelle des Raumes legen/hängen.
 
 ### Mit der o.g. Rule bekommen wird folgenden Regelungsverlauf der hier grafisch dargestellt wird.
 
