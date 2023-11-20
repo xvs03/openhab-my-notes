@@ -1,6 +1,6 @@
 # Shelly TRV Ventilregelung über OpenHAB | Rule in JavaScript 11
 
-![Grafik1](../Doku_md/../bilder/TRV_shelly/SHELLYTRV-900x900.jpg)
+![Grafik1](https://github.com/xvs03/openhab-my-notes/blob/main/images/TRV_shelly/SHELLYTRV-900x900.jpg)
 
 ## OpenHAB bietet für das Shelly TRV ein Binding an welches verschiedene Channels bereitstellt.
 
@@ -9,7 +9,7 @@
 ### Beispiel Rule:
 
 ### Screnshot von der Ruleübersicht:
-![Grafik2](../Doku_md/../bilder/TRV_shelly/TRV_Rule_Linearregelung.png)
+![Grafik2](../Doku_md/../images/TRV_shelly/TRV_Rule_Linearregelung.png)
 
 #### Hier wird in der "When" Bedingung drei Items mit ODER Logik verknüpft
 1. Ein Triggerswitch (zum manuellen Auslösen der Rule zu jedem Zeitpunkt)
