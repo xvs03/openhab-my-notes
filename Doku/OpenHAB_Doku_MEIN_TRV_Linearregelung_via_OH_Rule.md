@@ -93,6 +93,6 @@ console.log("Ventilöffnung in % wird an das TRV gesendet >>> ", VentiloeffnungI
 
 ![Grafik3](../Doku_md/../images/TRV_shelly/TRV_Grafik_Linearregelung_Ventil.png)
 
-### Ich habe noch einen Auszug aus der praktischen Auszug der Rule über 24h. aus der OpenHAB App
+### Ich habe noch einen Auszug aus der praktischen Anwendung der Rule über 24h. aus der OpenHAB App
 
 ![Grafik4](../Doku_md/../images/TRV_shelly/ScreenshotRuleTRV.png)
