@@ -6,4 +6,5 @@ I share here my notes that I created while working with OpenHAB.
 2.  [USER create and visible Pages](https://github.com/xvs03/openhab-my-notes/blob/main/Doku/Creat_USERs.md)
 3.  [MQTT Things, Channels and JSON use](https://github.com/xvs03/openhab-my-notes/blob/main/Doku/MQTT_Thinks_and_JSON.md)
 4.  [Shelly TRV - Regeln der Raumsolltemperatur über OpenHAB](https://github.com/xvs03/openhab-my-notes/blob/main/Doku/OpenHAB_Doku_MEIN_TRV_Linearregelung_via_OH_Rule.md)
+5.  [Shelly 3EM - Electricity billing and statistics with Shelly 3EM](https://github.com/xvs03/openhab-my-notes/blob/main/Doku/)
    
