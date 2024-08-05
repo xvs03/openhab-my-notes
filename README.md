@@ -8,4 +8,4 @@ I share here my notes that I created while working with OpenHAB.
 4.  [Shelly TRV - Regeln der Raumsolltemperatur über OpenHAB](https://github.com/xvs03/openhab-my-notes/blob/main/Doku/OpenHAB_Doku_MEIN_TRV_Linearregelung_via_OH_Rule.md)
 5.  [Shelly 3EM - Electricity billing and statistics with Shelly 3EM (documentation pending) ](https://github.com/xvs03/openhab-my-notes/blob/main/Doku/)
 6.  [Wallbox (230V) with SoC charging via openHAB controlled for SEAT MO 125 without API (documentation pending) ](https://github.com/xvs03/openhab-my-notes/blob/main/Doku/)
-7.  [Shelly Engergy Counter non-volatile]()
+7.  [Shelly Engergy Counter non-volatile](https://github.com/xvs03/openhab-my-notes/blob/da353cf7f9085dd16e74b906b6d291adccc80855/Rules/Shelly_Energy_Counter/Info.md)
