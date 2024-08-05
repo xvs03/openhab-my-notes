@@ -9,3 +9,4 @@
 3.  Ein Item was als Endloszähler dient.
 
 #### Ihr müsst im Code nur eure Items IDs eintragen
+[Link zu Shelly_Energy_Count.js](https://github.com/xvs03/openhab-my-notes/blob/d0668de90db670eca377cedf29200aa70c0964c1/Rules/Shelly_Energy_Counter/Shelly_Engergy_Count.js)
