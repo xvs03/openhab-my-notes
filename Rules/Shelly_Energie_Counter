@@ -1,4 +1,4 @@
-```javascript
+```js
 // Zählerstand TOTAL über inkrementieren der Differenz zwischen den OH Updates des flüchtigen Shellyzählerstandes (Reset bei Stromunterbrechung)
 // Triggerbedingung der Rule ist das Update des Shellyzählerstandes.
 
