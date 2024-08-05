@@ -1,3 +1,6 @@
+# Rule Shelly Engery Counter non-volatile vie OpenHAB
+#### Im OpenHAB Binding bietet Shelly einen Channel Namens Gesamtverbrauch an.
+
 ```JavaScript
 // Zählerstand TOTAL über inkrementieren der Differenz zwischen den OH Updates des flüchtigen Shellyzählerstandes (Reset bei Stromunterbrechung)
 // Triggerbedingung der Rule ist das Update des Shellyzählerstandes.
