@@ -2,8 +2,8 @@
 // Senden nur bei Stellwertänderung | 28.10.25
 // Zähler für Senden Stellwertänderung | 28.10.25
 // Lokale Variable: >preStoreSetTrvPos< aus Case: Fenster "ZU" als globale Variable angelegt. Probleme mit storeing der 0% V-Öffnung bei Fenster auf | 17.1.25
-
 // Item für Bugfix: ID: BLU_TRV_Vpos_mqtt | Name: Ventilstellung IST [%] | MQTT Subscribe
+// Wertsendung optimiert. Wert in TRV verarbeitet (subscribe Wert)
 
 
 var Solltemp = 0; // Solltemperatur Wohnzimmer (parsen in Float)
@@ -97,15 +97,27 @@ if (swState == "false"){
     // Variable Moven
     var setTrvPosInt = VentiloeffnungInProzentInt;
   
-    // Holen der letzten Ventilöffnungsvariablen
+    // Holen der letzten Ventilöffnungsvariablen aus Speicher
     preStoreSetTrvPos = cache.private.get('StoreSetTrvPos');
     console.log('Vorherige Ventilstellung war: >>>', preStoreSetTrvPos);
+
+    // Holen des aktuellen tatsächlichen Ventilöffungswertes vom TRV
+    var ValveCurrTRVPercent = items.getItem("BLU_TRV_Vpos_mqtt").state; // holen aktueller Ventilöffnungswert vom TRV
+    console.log("Aktueller Ventilöffnungswert in % ist: ", ValveCurrTRVPercent);
+    var ValveCurrTRVPercentToInt = parseInt(ValveCurrTRVPercent); // Prozentwert in Integer parsen
+    console.log("Aktueller Ventilöffnungswert in Int ist:", ValveCurrTRVPercentToInt);
   
   
-    // Nur senden wenn alter und neuer Wert ungleich  
-    if (preStoreSetTrvPos != setTrvPosInt){
+    /* Hier wird entschieden, ob dem TRV ein neuer Ventilöffnungswert gesendet werden soll.
+       Bedingungen für Wertsendung: 
+                                    Alter Sendewert und neuer Sendewert müssen ungleich sein
+                                    oder
+                                    Neuer Sendewert ist ungleich mit aktuellem Wert im TRV
+    */
+
+    if ((preStoreSetTrvPos != setTrvPosInt) || (setTrvPosInt != ValveCurrTRVPercentToInt)){
       
-      console.log("Vorheriger und aktueller Ventil Setwert unterscheiden sich, sende aktuellen Wert an TRV Küche: >>>", preStoreSetTrvPos);
+      console.log("Neuer Ventilöffnungswert festgestellt, sende aktuellen Wert an TRV Küche: >>>", preStoreSetTrvPos);
   
       // Speichern der letzten Ventilöffnungsvariablen
       var storeSetTrvPos = setTrvPosInt;  // Neue Speichervariable
@@ -158,18 +170,16 @@ if (swState == "false"){
       cache.private.put('ventilSetCounter', VentilSetCounter );
 
 
-      /*
-      // Kleines Päuschen
+      
+      // Kleines Päuschen wegen Anfragenüberlauf TRV
       console.log("STOPPE Rule für 6 Sekunden");
       java.lang.Thread.sleep(6000); // Bremse an            
       console.log("Arbeite Rule weiter ab");
       // Weiter gehts...
-      */
+      
 
       // Ventilstatus abfragen via Mqtt
-
-
-      // TRV Status nach Ventilstellungsänderung
+      // TRV Status nach Ventilstellungsänderung holen
 
           JsonTrvObjStatus = {
           id: 0,
@@ -201,7 +211,7 @@ if (swState == "false"){
       
     } // Stellwertvergleich
   
-    console.log("Alter und neuer Ventilöffnungswert sind gleich. Keine Wertsendung an TRV !!!  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    console.log("Alter und neuer Ventilöffnungswert sind gleich. Keine Wertsendung an TRV !!!")
   
     // Case Fenster = OFFEN
 } else {
